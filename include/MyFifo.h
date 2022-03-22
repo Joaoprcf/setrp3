@@ -20,14 +20,18 @@
 
 typedef unsigned int uint;
 
+/**
+ * @brief MyFifo structure
+ * 
+ */
 typedef struct MyFifo
 {
 
-        uint max_size;
-        uint occupyied;
-        uint tail;
-        uint head;
-        int vect[MAX_SIZE];
+        uint max_size; /**< Max size of fifo */
+        uint occupyied; /**< Number of elements */
+        uint tail; /**< index of the tail */
+        uint head; /**< index of the head */
+        int vect[MAX_SIZE]; /**< array of the elements */
 
 } MyFifo;
 
