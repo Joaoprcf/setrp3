@@ -4,14 +4,16 @@
 #define MAX_SIZE 50
 
 #define INIT_ERROR 1
+#define MAX_MEMORY_REACH 2
+#define EMPTY_FIFO 3
 
 typedef unsigned int uint;
 
 class MyFifo
 {
     private:
-        int max_size;
-        int occupyied;
+        uint max_size;
+        uint occupyied;
         uint tail;
         uint head;
         int vect[MAX_SIZE];
