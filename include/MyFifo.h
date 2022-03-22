@@ -3,9 +3,10 @@
 
 #define MAX_SIZE 50
 
-#define INIT_ERROR 1
-#define MAX_MEMORY_REACH 2
-#define EMPTY_FIFO 3
+#define NO_ERROR 0
+#define INIT_ERROR 0b1
+#define MAX_MEMORY_REACH 0b10
+#define EMPTY_FIFO 0b100
 
 typedef unsigned int uint;
 
