@@ -1,3 +1,14 @@
+/**
+ * @file main.c
+ * @author João Ferreira e João Carvalho
+ * @brief Test file of MyFifo struct and its corresponding functions 
+ * @version 0.1
+ * @date 2022-03-22
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
 #include <stdio.h>
 #include <assert.h>
 
@@ -20,6 +31,9 @@ int main(int argc, char *argv[])
     assert(error_value == MAX_MEMORY_REACH); 
 
     int return_value;
+
+    return_value = MyFifoSize(&fifo);
+    assert(return_value == 3);
 
     error_value = MyFifoPeep(&fifo, &return_value);
     assert(return_value == 4 && error_value == NO_ERROR);    
@@ -44,6 +58,9 @@ int main(int argc, char *argv[])
 
     error_value = MyFifoRemove(&fifo);
     assert(error_value == EMPTY_FIFO);
+
+    return_value = MyFifoSize(&fifo);
+    assert(return_value == 0);
 
     printf("All tests passed.\n");
 
