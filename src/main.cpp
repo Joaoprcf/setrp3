@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
     error_value = fifo.MyFifoRemove();
     assert(error_value == EMPTY_FIFO);
 
-    printf("All tests passed!!\n");
+    printf("All tests passed.\n");
 
     return 0;
 }

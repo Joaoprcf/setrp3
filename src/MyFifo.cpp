@@ -23,8 +23,8 @@ int MyFifo::MyFifoInsert(int value) {
         return MAX_MEMORY_REACH;
     }
 
-    vect[head] = value;
-    head = (head+1)%MAX_SIZE;
+    vect[tail] = value;
+    tail = (tail+1)%MAX_SIZE;
     occupyied++;
 
     return 0;
@@ -36,7 +36,7 @@ int MyFifo::MyFifoRemove() {
         return EMPTY_FIFO;
     }
     
-    tail = (tail+1)%MAX_SIZE;
+    head = (head+1)%MAX_SIZE;
     occupyied--;
 
     return 0;
@@ -47,7 +47,7 @@ int MyFifo::MyFifoPeep() {
         return EMPTY_FIFO;
     }
     
-    return vect[tail];
+    return vect[head];
 }
 
 uint MyFifo::MyFifoSize() {
