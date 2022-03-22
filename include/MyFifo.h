@@ -3,7 +3,7 @@
 
  * 
  * 
- * @author João Ferreira e João Carvalho
+ * @author João Ferreira, João Carvalho e Daniel Oliveira
  * @date 22 March 2022
  * @bug No known bugs.
  */

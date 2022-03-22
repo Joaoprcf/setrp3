@@ -1,6 +1,6 @@
 /**
  * @file main.c
- * @author João Ferreira e João Carvalho
+ * @author João Ferreira, João Carvalho e Daniel Oliveira
  * @brief Test file of MyFifo struct and its corresponding functions 
  * @version 0.1
  * @date 2022-03-22
