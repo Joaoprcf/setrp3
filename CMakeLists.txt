@@ -6,10 +6,10 @@ cmake_minimum_required(VERSION 3.5)
 # Set the project name
 project (setrp3)
 
-# Create a sources variable with a link to all cpp files to compile
+# Create a sources variable with a link to all c files to compile
 set(SOURCES
-    src/MyFifo.cpp
-    src/main.cpp
+    src/MyFifo.c
+    src/main.c
 )
 
 # Add an executable with the above sources

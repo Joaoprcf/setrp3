@@ -10,21 +10,21 @@
 
 typedef unsigned int uint;
 
-class MyFifo
+typedef struct MyFifo
 {
-    private:
+  
         uint max_size;
         uint occupyied;
         uint tail;
         uint head;
         int vect[MAX_SIZE];
+       
+} MyFifo;
 
-    public:
-        int MyFifoInit(uint size);
-        int MyFifoInsert(int value);
-        int MyFifoRemove();
-        int MyFifoPeep();
-        uint MyFifoSize();
-};
+int MyFifoInit(MyFifo * fifo, uint size);
+int MyFifoInsert(MyFifo * fifo, int value);
+int MyFifoRemove(MyFifo * fifo);
+int MyFifoPeep(MyFifo * fifo, int * value);
+uint MyFifoSize(MyFifo * fifo);
 
 #endif
