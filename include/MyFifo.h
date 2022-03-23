@@ -1,8 +1,7 @@
 /** @file MyFifo.h
- * @brief Fifo implementation with struct and its corresponding functions  
-
- * 
- * 
+ * @brief Fifo implementation with struct and its corresponding functions
+ *
+ *
  * @author João Ferreira, João Carvalho e Daniel Oliveira
  * @date 22 March 2022
  * @bug No known bugs.
@@ -22,7 +21,7 @@ typedef unsigned int uint;
 
 /**
  * @brief MyFifo structure
- * 
+ *
  */
 typedef struct MyFifo
 {
@@ -45,8 +44,8 @@ int MyFifoInit(MyFifo * fifo, uint size);
 
 /**
  * @brief Fuction to Insert value into the vector from the struct MyFifo
- * Possible Erros: INIT_ERROR
- * @param[in] MyFifo struct, Size
+ * Possible Erros: MAX_MEMORY_REACH
+ * @param[in] MyFifo struct, value
  * @param[out] error_value
  */
 int MyFifoInsert(MyFifo * fifo, int value);
@@ -54,31 +53,31 @@ int MyFifoInsert(MyFifo * fifo, int value);
 
 /**
  * @brief Remove the next element in the queue
- * 
- * 
- * @param[in] fifo 
- * @param[out] value 
- * @return uint 
+ *
+ *
+ * @param[in] fifo
+ * @param[out] value
+ * @return uint
  */
 
 int MyFifoRemove(MyFifo * fifo);
 
 /**
  * @brief Look at the next element in the queue
- * 
- * 
- * @param[in] fifo 
- * @param[out] value 
- * @return uint 
+ *
+ *
+ * @param[in] fifo
+ * @param[out] value
+ * @return uint
  */
 int MyFifoPeep(MyFifo * fifo, int * value);
 
 /**
- * @brief Get the number of elements in the queue 
- * 
- * 
- * @param[in] fifo 
- * @return uint 
+ * @brief Get the number of elements in the queue
+ *
+ *
+ * @param[in] fifo
+ * @return uint
  */
 
 uint MyFifoSize(MyFifo * fifo);
